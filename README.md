@@ -226,4 +226,8 @@ puts "And now your favorite_number is 10 more! It is #{favorite_number}"
 
 ## Conclusion
 
-(wip)
+So concludes our introduction to this module. The big picture is this:
+evaluations, while powerful, need _statements_ to control when (sequence),
+whether (selection), and how often (repetition) they are _evaluated_. The
+remainder of this module will be teaching you code statements in the category
+of sequence, selection, and repetition.
