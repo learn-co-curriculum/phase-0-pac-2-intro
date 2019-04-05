@@ -180,7 +180,7 @@ setting the variable.
 
 ## Provide Example of Selection Statement
 
-Sometimes we need to deviate from the default **sequence** we might need to
+Sometimes we need to deviate from the default **sequence**. We might need to
 **select** a different path. There's a poem by Robert Frost about it:
 
 > Two roads diverged in a yellow wood,
@@ -226,8 +226,19 @@ puts "And now your favorite_number is 10 more! It is #{favorite_number}"
 
 ## Conclusion
 
-So concludes our introduction to this module. The big picture is this:
-evaluations, while powerful, need _statements_ to control when (sequence),
-whether (selection), and how often (repetition) they are _evaluated_. The
-remainder of this module will be teaching you code statements in the category
-of sequence, selection, and repetition.
+So concludes our introduction to this module. This module is like a writing
+class: we first learn how to write _sentences_, then we learn how to structure
+them into paragraphs. As we get more comfortable with the interaction between
+sentences and paragraphs we get to use our creativity to be more _expressive_.
+
+The same is true of code. We aspire to write _eloquent_ and _expressive_ code.
+We started with the "sentences" of _expressions_ and we will now learn to
+structure them into "paragraphs" with _statements_ as the glue between the
+sentences.
+
+The big picture is this: evaluations, while powerful, need _statements_ to
+control when (sequence), whether (selection), and how often (repetition) they
+are _evaluated_. The remainder of this module will be teaching you code
+statements in the category of sequence, selection, and repetition. These
+statements will allow you to move your code in a more sophisticated and elegant
+direction.
