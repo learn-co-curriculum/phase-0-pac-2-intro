@@ -158,25 +158,31 @@ surprised by a result.
 
 ## Provide Example of Sequence Statement
 
-The default **sequence** of code is: "top to bottom, every line, left to right
-as ruled by order of operations"
+The sequence statement isn't so much a statement, as an assumption. Ruby, by
+default, will read our code according to the rules of a **default sequence**:
+"every line, top to bottom, left to right as ruled by order of operations."
+
+Like so:
 
 ```ruby
 result = 1 + 1
 puts result #=> 2
 ```
 
-You probably have an intuitive belief that the default sequence is this because
-you recognize code as "text" and you probably have the general theory that
-English text is read "top to bottom, left to right."
+You probably have an intuitive model of the **default sequence** because you
+recognize code as "text" and you probably have the general mindset that English
+text is read "top to bottom, left to right."
+
+It's why you intuitively grasp why Ruby would throw an error with the following
+code:
 
 ```ruby
 puts result #=> Error
 result = 1 + 1
 ```
 
-This error makes sense, because you're trying to do variable lookup before
-setting the variable.
+This error makes sense, because this code is trying to do variable lookup
+_before_ setting the variable that is looked up.
 
 ## Provide Example of Selection Statement
 
