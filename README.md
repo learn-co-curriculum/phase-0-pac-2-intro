@@ -218,7 +218,7 @@ puts "THE END"
 **Repetition** lets us disrupt default flow by _repeating_. The `.times`
 method, which will introduce formally in just a moment, means "do something
 `<value>` times." That "something" is held inside a `do...end` block. Other
-programming languages like JavaScript like to use (`{}`) to set up a "block of
+programming languages like JavaScript like to use curly braces (`{}`) to set up a "block of
 stuff to do". Python likes to use an indented line of code and neither `{}` nor
 `do...end`. Ruby prefers `do...end`.
 
