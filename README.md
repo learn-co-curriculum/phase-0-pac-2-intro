@@ -65,7 +65,7 @@ The `nil` value means "no value." You might recall it is one of the `falsey`
 values in Ruby. It is the value that means "nothing." It's not `true` or
 `false` it's the void. It's not 3 and it's also not any other number. It's the
 lack of the idea of a number. It's not the point on the number line `0` which
-means something similar ("no value"), it is the true nothing where the idea of
+means "no distance from the `0` point," rather it is the **true** nothing where the idea of
 things at all (including `Integer`s, `Float`s, etc.) _does not exist_.
 
 Some programming languages hate `nil` and make you squash it away as much as
@@ -74,9 +74,6 @@ JavaScript), and others permit programmers to play fast-and-loose with it:
 reaping speed rewards and but also crashing million-dollar systems (C). In
 time, you'll form an opinion on this, but the fact we must accept is that Ruby
 has it.
-
-Alternatively, consider this `if` statement: we've not formally studied `if`
-(but will do so in the next lesson!), but Ruby's syntax is very easy to read.
 
 But why does a `puts` return `nil`? It's printing something to the screen,
 that's "returning" a _return value_, right?
@@ -132,7 +129,7 @@ and `puts` are statements: they don't evaluate an expression; instead they
 decide whether something should happen.
 
 ***At its heart, programming is structuring which expressions get evaluated and in
-what order that happens.***
+what order that happens to solve problems.***
 
 ## Identify Three Core Categories of Code Statements
 
