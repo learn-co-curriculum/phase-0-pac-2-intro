@@ -41,7 +41,7 @@ other decisions and _context_ so that the most-correct _expressions_ are
 _evaluated_.
 
 That will be the purpose of this module, Programming as Conversation, Part 2.
-Here we will learn to wrap _expressions_ to _statements_ that will give us
+Here we will learn to wrap _expressions_ in _statements_ that will give us
 greater flexibility and enrich our communication.
 
 ## Define a Statement Versus an Expression
