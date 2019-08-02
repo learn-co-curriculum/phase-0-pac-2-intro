@@ -144,8 +144,6 @@ There are three core types of statement that we will cover in this module.
   until something has happened a certain number of times, can we change the
   sequence to make something repeat before moving on?
 
-![Sequence, Selection, and Repitition](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/Image_1_Default_flow%2C%20repetitiopn%2Cselection.png)
-
 Let's look at a few examples. Try them out in IRB. We'll cover them more
 formally later.
 
