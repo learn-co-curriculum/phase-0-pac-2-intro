@@ -5,13 +5,13 @@
 * Define a statement versus an expression
 * Identify the `nil` value and its purpose
 * Identify three core categories of code statements
-* Provide example of sequence statement
-* Provide example of selection statement
-* Provide example of repetition statement
+* Provide an example of sequence statement
+* Provide an example of selection statement
+* Provide an example of repetition statement
 
 ## Introduction
 
-Welcome to Programming as Conversation, Part 2! In this module we'll be
+Welcome to Programming as Conversation, Part 2! In this module, we'll be
 enriching the kinds of conversations we have with Ruby. In Part 1 we learned to
 recognize _expressions_ and saw that the data and the operations are
 _evaluated_ to produce a result or "return value." We also learned three
@@ -41,7 +41,7 @@ The same is true in code: while we can do a great amount of work using
 _expressions_. _Mature_ "speakers" of code learn to wrap their _expressions_ in
 other _decisions_ and _context_ so that the right thing happens ***but also***
 so that others can understand the code easily. Learning to "wrap" expressions
-in reader-friendly context will continue on into Programming as Conversation
+in reader-friendly context will continue into Programming as Conversation
 Part 3 as well.
 
 Let's start learning how to wrap our _expressions_ in _statements_ that will
@@ -51,7 +51,7 @@ give us greater flexibility **and** enrich our communication.
 
 **Statements alter the order in which code is evaluated from the default
 execution order of top-to-bottom, left-to-right. The default execution order is
-sometimes called the default code "flow." Statement usually return no value.***
+sometimes called the default code "flow." Statements usually return no value.***
 
 Below, `1 + 1` is an expression:
 
@@ -82,7 +82,7 @@ of `Integer`s or `Float`s.
 
 In short, `nil` is The Void.
 
-The return-value of `puts` (print something to something) is `nil` because
+The return value of `puts` (print something to something) is `nil` because
 Ruby can't know whether the printing was successful. It knows whether adding
 `1` to `1` was successful. But what if the monitor is disconnected? What if no
 one is looking at it? Because Ruby can't know, it says `nil`.
@@ -100,8 +100,8 @@ in what order:
 * **Selection**: Given the default order (or "sequence"), can we choose to run
   certain lines of code and not others? How do we do so?
 * **Repetition**: Given the default order (or "sequence"), can we choose to do
-  something until a condition is met or until code has run a specified
-  number of times?
+  something until a condition is met or until code has run some number of
+  times?
 
 
 > **NOTE**: Be sure to try the following examples yourself in IRB.  These
@@ -110,7 +110,7 @@ in what order:
 > might assume `result` is `nil`, you might get a surprising result. Use `exit`
 > to leave IRB and launch a fresh session if you're surprised by a result.
 
-## Provide Example of Sequence Statement
+## Provide An Example of Sequence Statement
 
 ![Sequence Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/introduction/Image_94_Sequence_LARGE.png)
 
@@ -118,8 +118,8 @@ _As you'll see in the next section, we've created a little icon for each of
 these types of statement. We're going to introduce you to them now so that we
 have an easy way to remind you which type of statement you're looking at._
 
-The sequence statement isn't so much a statement, as an assumption. Ruby, by
-default, will read our code according to the rules of a **default sequence** or
+The sequence statement isn't so much a statement, as an assumption. Ruby by
+default will read our code according to the rules of a **default sequence** or
 **default flow**: "every line, top to bottom, left to right as ruled by order
 of operations."
 
@@ -130,9 +130,10 @@ result = 1 + 1
 puts result #=> 2
 ```
 
-You probably have an intuitive model of the **default sequence** because you
+You probably have an intuitive model of the **default sequence** since you
 have the general mindset that English text is read "top to bottom, left to
-right" and expect that to apply to code.
+right" and expect that to apply to code. It does! Isn't' it nice when things
+meet our default assumptions?
 
 This is why you intuitively grasp why Ruby would throw an error with the
 following code:
@@ -142,10 +143,10 @@ puts result #=> Error
 result = 1 + 1
 ```
 
-This error makes sense, because this code is trying to do variable lookup
+This error makes sense because this code is trying to do a variable lookup
 _before_ setting the variable that is looked up.
 
-## Provide Example of Selection Statement
+## Provide An Example of Selection Statement
 
 ![Seelection Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/introduction/Image_94_Selection_LARGE.png)
 
@@ -156,7 +157,7 @@ Sometimes we need to deviate from the default **sequence**. We might need to
 > And sorry I could not travel both
 > And be one traveler
 
-In this case the traveler is Ruby, traveling fatefully down the default
+In this case, the traveler is Ruby, traveling fatefully down the default
 sequence. We, as programmers, create a fork, a "split" in fate, and ask Ruby to
 take one path (or the other, or a third, or a fourth...and so on) based on a
 Boolean "test" expression's return value. We ask Ruby to _select_ the path.
@@ -176,7 +177,7 @@ puts "THE END"
 
 **Selection** lets us disrupt default flow by _making a choice_.
 
-## Provide Example of Repetition Statement
+## Provide An Example of Repetition Statement
 
 ![Repetition Graphic](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/introduction/Image_94_Repetition_LARGE.png)
 
