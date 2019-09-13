@@ -148,14 +148,14 @@ _before_ setting the variable that is looked up.
 
 ## Provide An Example of Selection Statement
 
-![Seelection Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/introduction/Image_94_Selection_LARGE.png)
+![Seelection Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Selection_thick.png)
 
 Sometimes we need to deviate from the default **sequence**. We might need to
 **select** a different path. There's a poem by Robert Frost about it:
 
-> Two roads diverged in a yellow wood,
-> And sorry I could not travel both
-> And be one traveler
+> Two roads diverged in a yellow wood,  
+> And sorry I could not travel both . 
+> And be one traveler . 
 
 In this case, the traveler is Ruby, traveling fatefully down the default
 sequence. We, as programmers, create a fork, a "split" in fate, and ask Ruby to
@@ -175,11 +175,14 @@ end
 puts "THE END"
 ```
 
-**Selection** lets us disrupt default flow by _making a choice_.
+**Selection** lets us disrupt default flow by _making a choice_. If `favorite_number`
+were assigned `0` at the time the `if` statement is evaluated, it would skip over
+the code in the `if...end` block. That's why our icon shows the default
+flow "hopping" from one point to another, skipping what's in the middle.
 
 ## Provide An Example of Repetition Statement
 
-![Repetition Graphic](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/introduction/Image_94_Repetition_LARGE.png)
+![Repetition Graphic](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Repetition_thick.png)
 
 **Repetition** lets us disrupt default flow by _repeating_. The `.times`
 method, which will introduce formally in a few lessons, means "do something
@@ -194,6 +197,13 @@ favorite_number = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
 end
 puts "And now your favorite_number is 10 more! It is #{favorite_number}"
 ```
+
+**Repetition** lets us disrupt default flow by marking off a set of commands that
+should be re-evaluated multiple times before resuming default flow. It's even
+possible to get into a repetition statement that you never exit. Programmers
+call that an "infinite loop." Most of the time, that's not a desirable situation.
+Our icon shows the more desirable situation of us following default sequence, then
+finding a block that we repeat multiple times, then returning to default sequence.
 
 ## Conclusion
 
