@@ -69,6 +69,7 @@ puts result #=> nil`
 
 Here's an important distinction. The return value, after the `#=>` is `nil` but
 a "side-effect" of running the `puts` statement is printing `2` to the screen.
+Expressions ***always*** return a value. Sttatements do not, as we see with `puts`.
 
 ## Identify the `nil` Value and Its Purpose
 
