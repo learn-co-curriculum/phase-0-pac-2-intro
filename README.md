@@ -113,18 +113,17 @@ in what order:
 
 ## Provide An Example of Sequence Statement
 
-![Sequence Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/introduction/Image_94_Sequence_LARGE.png)
+![Sequence Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_thick.png)
 
-_As you'll see in the next section, we've created a little icon for each of
-these types of statement. We're going to introduce you to them now so that we
-have an easy way to remind you which type of statement you're looking at._
+_As you'll see in the next lessons, we've created a little icon for each of
+these types of statement. We're going to introduce you to these icons now so that we
+remind you which type of statement you're looking at._
 
 The sequence statement isn't so much a statement, as an assumption. Ruby by
 default will read our code according to the rules of a **default sequence** or
 **default flow**: "every line, top to bottom, left to right as ruled by order
-of operations."
-
-Like so:
+of operations." The "icon" above shows that rule. When you see it, you should
+immediately think about "execution order."
 
 ```ruby
 result = 1 + 1
