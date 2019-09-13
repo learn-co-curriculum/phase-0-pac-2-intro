@@ -214,3 +214,6 @@ conjunctions and punctuation (like the cookie examples!). We improve our basic
 sentences by bringing in statements from the SELECTION and REPETITION class
 which deviate from the default "flow' or SEQUENCE.
 
+In upcoming lessons you'll see our icons repeated to help you have a visual
+reminder of whether the statement you're learning is about SELECTION, REPETITION,
+or SEQUENCE.
