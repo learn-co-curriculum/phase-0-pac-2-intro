@@ -5,219 +5,190 @@
 * Define a statement versus an expression
 * Identify the `nil` value and its purpose
 * Identify three core categories of code statements
-* Provide example of sequence statement
-* Provide example of selection statement
-* Provide example of repetition statement
+* Provide an example of sequence statement
+* Provide an example of selection statement
+* Provide an example of repetition statement
 
 ## Introduction
 
-Welcome to Programming as Conversation, Part 2!
+Welcome to Programming as Conversation, Part 2! In this module, we'll be
+enriching the kinds of conversations we have with Ruby. In Part 1 we learned to
+recognize _expressions_ and saw that the data and the operations are
+_evaluated_ to produce a result or "return value." We also learned three
+important expressions: the constant expression, the assignment expression, and
+the variable lookup expression. In this module we'll see that evaluations of
+expressions, while powerful, need _statements_ to control when (sequence),
+whether (selection), and how many times (repetition) they are _evaluated_. Code
+of this type is called a "statement."
 
-When we were children learning to talk, we reached an ability to make simple
-statements, and be responded to in a simple fashion. But once we'd learned to
-make simple statements in the form of complete sentences, we were asked to
-"elevate" our communication. We were expected to provide context to our
-requests and state our thoughts in an order that others could receive. In
-writing we were expected to move from simple, on-line answers to writing
-_paragraphs_.
+We can see a parallel between expressions and statements to how children
+_first_ learn to speak and how they enrich their communication with time.
+Learning to talk is a gigantic achievement. It's a much-loved moment for
+parents when a child learns to communicate through words instead of screaming
+fits. In this early phase, however, some of their statements lack politeness
+and sensitivity.
 
-A two-year old might be able to express (and might well have a tantrum if denied):
+![Raw id, uncouth expression of desire for a cookie](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/introduction/Image_92_CookieNOW.png)
 
-> I want a cookie!
+Part of growing in their ability to converse is learning to wrap their desires
+in politeness and consideration for the listener. "Would you mind giving me a
+cookie?" and "Would you care to join me for a cookie?" both express the same
+desire as our "rougher" example above, but show maturity.
 
-But an eight-year old might be expected:
+![A mannerly cookie request](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/introduction/Image_93_CookiePolite.png)
 
-> Mom, that cookie smells good! If I clean my room, may I have one? I want one
-> of those cookies!
+The same is true in code: while we can do a great amount of work using
+_expressions_. _Mature_ "speakers" of code learn to wrap their _expressions_ in
+other _decisions_ and _context_ so that the right thing happens ***but also***
+so that others can understand the code easily. Learning to "wrap" expressions
+in reader-friendly context will continue into Programming as Conversation
+Part 3 as well.
 
-This second example shows _maturity_. We can see a hint of cause and effect
-(If...then), a hint of personal responsibility, an understanding that cookies
-are treats, etc.
-
-The same is true in code: while we can do a great amount of work and expression
-using _expressions_. Every mature "speaker" of code will use _expressions_ quite
-a lot. However, _mature_ code "speakers" learn to wrap their _expressions_ in
-other decisions and _context_ so that the most-correct _expressions_ are
-_evaluated_.
-
-That will be the purpose of this module, Programming as Conversation, Part 2.
-Here we will learn to wrap _expressions_ in _statements_ that will give us
-greater flexibility and enrich our communication.
+Let's start learning how to wrap our _expressions_ in _statements_ that will
+give us greater flexibility **and** enrich our communication.
 
 ## Define a Statement Versus an Expression
 
-**_Expressions_ always return a value. Statements do not.**
+**Statements alter the order in which code is evaluated from the default
+execution order of top-to-bottom, left-to-right. The default execution order is
+sometimes called the default code "flow." Statements usually return no value.***
 
-This is an expression: `result = 1 + 1 #=> 2`.
+Below, `1 + 1` is an expression:
 
-This is a statement: `puts result #=> nil`.
+```ruby
+result = 1 + 1 #=> 2`
+```
 
-Unlike _expressions_, _statements_ in _most_ programming languages do not
-return a value. We're going to use this difference in mind as we learn
-more about Ruby's statements.
+Below, `puts result` is a ***statement***:
 
-What the heck was the return value of `puts` there just a moment ago? Let's
-take a look at it a bit further.
+```ruby
+result = 1 + 1 #=> 2`
+puts result #=> nil`
+2
+```
+
+Here's an important distinction. The return value, after the `#=>` is `nil` but
+a "side-effect" of running the `puts` statement is printing `2` to the screen.
+Expressions ***always*** return a value. Sttatements do not, as we see with `puts`.
 
 ## Identify the `nil` Value and Its Purpose
 
 The `nil` value means "no value." You might recall it is one of the `falsey`
 values in Ruby. It is the value that means "nothing." It's not `true` or
-`false` it's the void. It's not 3 and it's also not any other number. It's the
-lack of the idea of a number. It's not the point on the number line `0` which
-means "no distance from the `0` point," rather it is the **true** nothing where the idea of
-things at all (including `Integer`s, `Float`s, etc.) _does not exist_.
+`false`. It's a world without the scale of `true` or `false`.
 
-Some programming languages hate `nil` and make you squash it away as much as
-possible (Swift), others embrace this Zen or Vedic mystery value (Ruby,
-JavaScript), and others permit programmers to play fast-and-loose with it:
-reaping speed rewards and but also crashing million-dollar systems (C). In
-time, you'll form an opinion on this, but the fact we must accept is that Ruby
-has it.
+It's not `3` and it's also not any other number. It's also not `0`, a value
+that's no distance from `0` on the number scale. It's a world without the scale
+of `Integer`s or `Float`s.
 
-But why does a `puts` return `nil`? It's printing something to the screen,
-that's "returning" a _return value_, right?
+In short, `nil` is The Void.
 
-Think of it this way:
+The return value of `puts` (print something to something) is `nil` because
+Ruby can't know whether the printing was successful. It knows whether adding
+`1` to `1` was successful. But what if the monitor is disconnected? What if no
+one is looking at it? Because Ruby can't know, it says `nil`.
 
-Consider:
-
-```ruby
-result = 1 + 1
-puts result
-```
-
-|Code|Process|
-|-|-|
-|1 + 1 | Return values of constant `1` and `1` and summed due to `+` operator|
-| result =  2 | Calculated `2` from previous step is assigned to result|
-| result #=> 2 | `result` now holds `2`|
-| puts result | constant lookup returns 2 and prints it to the screen|
-
-What is the return value of printing to the screen? Was it `true` because it
-was read (can a computer know that?) Is it the value that was sent out, `2`?
-Even if the value was sent to the screen, what if the monitor was off or
-broken, could the programming language know that? Because Ruby doesn't know
-_what_ to return, it returns `nil`. In this case it's a bit like "No comment."
-
-It certainly makes sense for Ruby to take this attitude, but it'd be horrible
-if Ruby were to take this same attitude toward expression:
-
-```ruby
-1 + 1 #=> Nah, not feeling like adding today, so....nil!
-```
-
-Well, that'd be really unhelpful...and scary! But again, this underscores the
-difference between _expressions_ and _statements_: _expressions_ always return
-values. Statements usually do not.
-
-Let's try a slightly more complex example. You've not been introduced to the `if`
-_statement_ formally yet (soon!), but you should be able to follow this:
-
-```ruby
-if result == 2
-  puts "things match"
-end
-```
-
-You see, the `if` doesn't have a return value, it structures whether or not the
-`puts` expressions will send the `String` constant expression to the screen.
-
-The _expressions_ in this _statement_ are the Boolean-returning equality test
-(`result == 2`) and the constant expression (`"things match"`), but `if...end`
-and `puts` are statements: they don't evaluate an expression; instead they
-decide whether something should happen.
-
-***At its heart, programming is structuring which expressions get evaluated and in
-what order that happens to solve problems.***
+Again, this behavior underscores the difference between _expressions_ and
+_statements_: _expressions_ always return values. Statements might, but they
+might not.
 
 ## Identify Three Core Categories of Code Statements
 
-There are three core types of statement that we will cover in this module.
+There are three types of statement that change the order of what gets run and
+in what order:
 
-* **Sequence**: What code runs in what order? We make a sandwich before eating it;
-  likewise, certain evaluations will run before others. How is that order
-  determined?
-* **Selection**: Given the default order of sequence, can we deviate from it
-  under certain conditions? How do we do so?
-* **Repetition**: Given a need to something until a something is `true`, or
-  until something has happened a certain number of times, can we change the
-  sequence to make something repeat before moving on?
+* **Sequence**: What code will run next by default?
+* **Selection**: Given the default order (or "sequence"), can we choose to run
+  certain lines of code and not others? How do we do so?
+* **Repetition**: Given the default order (or "sequence"), can we choose to do
+  something until a condition is met or until code has run some number of
+  times?
 
-Let's look at a few examples. Try them out in IRB. We'll cover them more
-formally later.
 
-> **NOTE**: These examples assume you're working in a
-fresh, new IRB session _for each example_. If you define `result` and _don't_
-restart IRB and a later example might assume `result` is `nil`, you might get a
-surprising result. Use `exit` to leave IRB and launch a fresh session if you're
-surprised by a result.
+> **NOTE**: Be sure to try the following examples yourself in IRB.  These
+> examples assume you're working in a fresh, new IRB session _for each
+> example_. If you define `result` and _don't_ restart IRB and a later example
+> might assume `result` is `nil`, you might get a surprising result. Use `exit`
+> to leave IRB and launch a fresh session if you're surprised by a result.
 
-## Provide Example of Sequence Statement
+## Provide An Example of Sequence Statement
 
-The sequence statement isn't so much a statement, as an assumption. Ruby, by
-default, will read our code according to the rules of a **default sequence**:
-"every line, top to bottom, left to right as ruled by order of operations."
+![Sequence Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_thick.png)
 
-Like so:
+_As you'll see in the next lessons, we've created a little icon for each of
+these types of statement. We're going to introduce you to these icons now so that we
+remind you which type of statement you're looking at._
+
+The sequence statement isn't so much a statement, as an assumption. Ruby by
+default will read our code according to the rules of a **default sequence** or
+**default flow**: "every line, top to bottom, left to right as ruled by order
+of operations." The "icon" above shows that rule. When you see it, you should
+immediately think about "execution order."
 
 ```ruby
 result = 1 + 1
 puts result #=> 2
 ```
 
-You probably have an intuitive model of the **default sequence** because you
-recognize code as "text" and you probably have the general mindset that English
-text is read "top to bottom, left to right."
+You probably have an intuitive model of the **default sequence** since you
+have the general mindset that English text is read "top to bottom, left to
+right" and expect that to apply to code. It does! Isn't' it nice when things
+meet our default assumptions?
 
-It's why you intuitively grasp why Ruby would throw an error with the following
-code:
+This is why you intuitively grasp why Ruby would throw an error with the
+following code:
 
 ```ruby
 puts result #=> Error
 result = 1 + 1
 ```
 
-This error makes sense, because this code is trying to do variable lookup
+This error makes sense because this code is trying to do a variable lookup
 _before_ setting the variable that is looked up.
 
-## Provide Example of Selection Statement
+## Provide An Example of Selection Statement
+
+![Seelection Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Selection_thick.png)
 
 Sometimes we need to deviate from the default **sequence**. We might need to
 **select** a different path. There's a poem by Robert Frost about it:
 
-> Two roads diverged in a yellow wood,
-> And sorry I could not travel both
-> And be one traveler
+> Two roads diverged in a yellow wood,  
+> And sorry I could not travel both . 
+> And be one traveler . 
 
-In this case the traveler is Ruby, traveling fatefully down the default
-sequence. We, as programmers, create a divergence, a "split" in fate, and ask
-Ruby to take one path (or the other, or a third, or a fourth...and so on) based
-on a Boolean "test" _evaluation_. We ask Ruby to _select_ the path.
+In this case, the traveler is Ruby, traveling fatefully down the default
+sequence. We, as programmers, create a fork, a "split" in fate, and ask Ruby to
+take one path (or the other, or a third, or a fourth...and so on) based on a
+Boolean "test" expression's return value. We ask Ruby to _select_ the path.
 
-The first tool we'll learn to do **selection** is `if`. It disrupts the
-"default sequence" by asking Ruby to run a test, decide whether to follow the
-path, and then move back to the default sequence.
+The first tool we'll learn to do **selection** is `if`. The `if` statement
+disrupts the "default sequence" by asking Ruby to run a test, decide whether to
+follow the path, and then move back to the default sequence.
 
 ```ruby
 favorite_number = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
-if favorite_number >= 10
+if favorite_number >= 10 # evaluating favorite_number >= 10 returns true
   favorite_number = favorite_number + 10
   puts "And now your favorite_number is 10 more!"
 end
 puts "THE END"
 ```
 
-**Selection** lets us disrupt default flow by _making a choice_.
+**Selection** lets us disrupt default flow by _making a choice_. If `favorite_number`
+were assigned `0` at the time the `if` statement is evaluated, it would skip over
+the code in the `if...end` block. That's why our icon shows the default
+flow "hopping" from one point to another, skipping what's in the middle.
 
-## Provide Example of Repetition Statement
+## Provide An Example of Repetition Statement
+
+![Repetition Graphic](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Repetition_thick.png)
 
 **Repetition** lets us disrupt default flow by _repeating_. The `.times`
-method, which will introduce formally in just a moment, means "do something
+method, which will introduce formally in a few lessons, means "do something
 `<value>` times." That "something" is held inside a `do...end` block. Other
-programming languages like JavaScript like to use curly braces (`{}`) to set up a "block of
-stuff to do". Python likes to use an indented line of code and neither `{}` nor
-`do...end`. Ruby prefers `do...end`.
+programming languages like JavaScript like to use curly braces (`{}`) to set up
+a "block of stuff to do". Ruby prefers `do...end`.
 
 ```ruby
 favorite_number = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
@@ -227,21 +198,22 @@ end
 puts "And now your favorite_number is 10 more! It is #{favorite_number}"
 ```
 
+**Repetition** lets us disrupt default flow by marking off a set of commands that
+should be re-evaluated multiple times before resuming default flow. It's even
+possible to get into a repetition statement that you never exit. Programmers
+call that an "infinite loop." Most of the time, that's not a desirable situation.
+Our icon shows the more desirable situation of us following default sequence, then
+finding a block that we repeat multiple times, then returning to default sequence.
+
 ## Conclusion
 
-So concludes our introduction to this module. This module is like a writing
-class: we first learn how to write _sentences_, then we learn how to structure
-them into paragraphs. As we get more comfortable with the interaction between
-sentences and paragraphs we get to use our creativity to be more _expressive_.
+This concludes our introduction to this module. This module is like a writing
+class: we know how to write basic _sentences_ with a simple subject and a
+simple verb. We're now going to try to write complete sentences with
+conjunctions and punctuation (like the cookie examples!). We improve our basic
+sentences by bringing in statements from the SELECTION and REPETITION class
+which deviate from the default "flow' or SEQUENCE.
 
-The same is true of code. We aspire to write _eloquent_ and _expressive_ code.
-We started with the "sentences" of _expressions_ and we will now learn to
-structure them into "paragraphs" with _statements_ as the glue between the
-sentences.
-
-The big picture is this: evaluations, while powerful, need _statements_ to
-control when (sequence), whether (selection), and how often (repetition) they
-are _evaluated_. The remainder of this module will be teaching you code
-statements in the category of sequence, selection, and repetition. These
-statements will allow you to move your code in a more sophisticated and elegant
-direction.
+In upcoming lessons you'll see our icons repeated to help you have a visual
+reminder of whether the statement you're learning is about SELECTION, REPETITION,
+or SEQUENCE.
