@@ -16,7 +16,7 @@ enriching the kinds of conversations we have with Ruby. In Part 1 we learned to
 recognize _expressions_ and saw that the data and the operations are
 _evaluated_ to produce a result or "return value." We also learned three
 important expressions: the constant expression, the assignment expression, and
-the variable lookup expression. In this module we'll see that evaluations of
+the variable lookup expression. In this module, we'll see that evaluations of
 expressions, while powerful, need _statements_ to control when (sequence),
 whether (selection), and how many times (repetition) they are _evaluated_. Code
 of this type is called a "statement."
@@ -69,7 +69,7 @@ puts result #=> nil`
 
 Here's an important distinction. The return value, after the `#=>` is `nil` but
 a "side-effect" of running the `puts` statement is printing `2` to the screen.
-Expressions ***always*** return a value. Sttatements do not, as we see with `puts`.
+Expressions ***always*** return a value. Statements do not, as we see with `puts`.
 
 ## Identify the `nil` Value and Its Purpose
 
@@ -116,7 +116,7 @@ in what order:
 ![Sequence Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_thick.png)
 
 _As you'll see in the next lessons, we've created a little icon for each of
-these types of statement. We're going to introduce you to these icons now so that we
+these types of statements. We're going to introduce you to these icons now so that we
 remind you which type of statement you're looking at._
 
 The sequence statement isn't so much a statement, as an assumption. Ruby by
@@ -214,6 +214,6 @@ conjunctions and punctuation (like the cookie examples!). We improve our basic
 sentences by bringing in statements from the SELECTION and REPETITION class
 which deviate from the default "flow' or SEQUENCE.
 
-In upcoming lessons you'll see our icons repeated to help you have a visual
+In upcoming lessons, you'll see our icons repeated to help you have a visual
 reminder of whether the statement you're learning is about SELECTION, REPETITION,
 or SEQUENCE.
