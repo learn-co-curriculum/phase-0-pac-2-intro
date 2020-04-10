@@ -12,11 +12,11 @@
 ## Introduction
 
 Welcome to Programming as Conversation, Part 2! In this module, we'll be
-enriching the kinds of conversations we have with Ruby. In Part 1 we learned to
+enriching the kinds of conversations we have with Ruby. In Part 1, we learned to
 recognize _expressions_ and saw that the data and the operations are
 _evaluated_ to produce a result or "return value." We also learned three
 important expressions: the constant expression, the assignment expression, and
-the variable lookup expression. In this module, we'll see that evaluations of
+the variable lookup expression. In this next module, we'll see that evaluations of
 expressions, while powerful, need _statements_ to control when (sequence),
 whether (selection), and how many times (repetition) they are _evaluated_. Code
 of this type is called a "statement."
@@ -74,8 +74,7 @@ Expressions ***always*** return a value. Statements do not, as we see with `puts
 ## Identify the `nil` Value and Its Purpose
 
 The `nil` value means "no value." You might recall it is one of the `falsey`
-values in Ruby. It is the value that means "nothing." It's not `true` or
-`false`. It's a world without the scale of `true` or `false`.
+values in Ruby. It is the value that represents "nothing."
 
 It's not `3` and it's also not any other number. It's also not `0`, a value
 that's no distance from `0` on the number scale. It's a world without the scale
