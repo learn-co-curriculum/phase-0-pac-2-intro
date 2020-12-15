@@ -154,9 +154,11 @@ _before_ setting the variable that is looked up.
 Sometimes we need to deviate from the default **sequence**. We might need to
 **select** a different path. There's a poem by Robert Frost about it:
 
-> Two roads diverged in a yellow wood,  
-> And sorry I could not travel both 
-> And be one traveler, long I stood 
+```text
+Two roads diverged in a yellow wood,  
+And sorry I could not travel both 
+And be one traveler, long I stood 
+```
 
 In this case, the traveler is Ruby, traveling fatefully down the default
 sequence. We, as programmers, create a fork, a "split" in fate, and ask Ruby to
