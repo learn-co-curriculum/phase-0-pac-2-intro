@@ -13,13 +13,13 @@
 
 Welcome to Programming as Conversation, Part 2! In this module, we'll be
 enriching the kinds of conversations we have with Ruby. In Part 1, we learned to
-recognize _expressions_ and saw that the data and the operations are
-_evaluated_ to produce a result or "return value." We also learned three
-important expressions: the constant expression, the assignment expression, and
-the variable lookup expression. In this next module, we'll see that evaluations of
-expressions, while powerful, need _statements_ to control when (sequence),
-whether (selection), and how many times (repetition) they are _evaluated_. Code
-of this type is called a "statement."
+recognize _expressions_ and saw that the data and operations they are comprised of 
+are _evaluated_ to produce a result or "return value." We also learned three 
+important expressions: the constant expression, the assignment expression, and the 
+variable lookup expression. In this next module, we'll see that evaluations of 
+expressions, while powerful, need _statements_ to control when (sequence), whether 
+(selection), and how many times (repetition) they are _evaluated_. Code of this 
+type is called a "statement."
 
 We can see a parallel between expressions and statements to how children
 _first_ learn to speak and how they enrich their communication with time.
@@ -37,12 +37,12 @@ desire as our "rougher" example above, but show maturity.
 
 ![A mannerly cookie request](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/introduction/Image_93_CookiePolite.png)
 
-The same is true in code: while we can do a great amount of work using
-_expressions_. _Mature_ "speakers" of code learn to wrap their _expressions_ in
-other _decisions_ and _context_ so that the right thing happens ***but also***
-so that others can understand the code easily. Learning to "wrap" expressions
-in reader-friendly context will continue into Programming as Conversation
-Part 3 as well.
+The same is true in code: we can do a great amount of work using just
+_expressions_. However, _mature_ "speakers" of code learn to wrap their
+_expressions_ in other _decisions_ and _context_. This ensures not only
+that the right thing happens, ***but also*** that others can understand the
+code easily. Learning to "wrap" expressions in reader-friendly context will
+continue into Programming as Conversation Part 3 as well.
 
 Let's start learning how to wrap our _expressions_ in _statements_ that will
 give us greater flexibility **and** enrich our communication.
