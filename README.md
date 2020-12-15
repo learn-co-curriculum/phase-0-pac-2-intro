@@ -51,7 +51,7 @@ give us greater flexibility **and** enrich our communication.
 
 **Statements alter the order in which code is evaluated from the default
 execution order of top-to-bottom, left-to-right. The default execution order is
-sometimes called the default code "flow." Statements usually return no value.***
+sometimes called the default code "flow." Statements usually return no value.**
 
 Below, `1 + 1` is an expression:
 
@@ -73,8 +73,9 @@ Expressions ***always*** return a value. Statements do not, as we see with `puts
 
 ## Identify the `nil` Value and Its Purpose
 
-The `nil` value means "no value." You might recall it is one of the `falsey`
-values in Ruby. It is the value that represents "nothing."
+The `nil` value means "no value." You might recall that it is treated as a 
+`falsey` value in Ruby. This makes sense because it's the value that represents
+"nothing."
 
 It's not `3` and it's also not any other number. It's also not `0`, a value
 that's no distance from `0` on the number scale. It's a world without the scale
@@ -106,9 +107,10 @@ in what order:
 
 > **NOTE**: Be sure to try the following examples yourself in IRB.  These
 > examples assume you're working in a fresh, new IRB session _for each
-> example_. If you define `result` and _don't_ restart IRB and a later example
-> might assume `result` is `nil`, you might get a surprising result. Use `exit`
-> to leave IRB and launch a fresh session if you're surprised by a result.
+> example_. Specifically, they assume that the variables they use have not yet 
+> been defined. If you _don't_ restart IRB between each example, you might get 
+> a surprising result. If that happens, just use `exit` to leave IRB and then 
+> launch a fresh session.
 
 ## Provide An Example of Sequence Statement
 
@@ -131,7 +133,7 @@ puts result #=> 2
 
 You probably have an intuitive model of the **default sequence** since you
 have the general mindset that English text is read "top to bottom, left to
-right" and expect that to apply to code. It does! Isn't' it nice when things
+right" and expect that to apply to code. It does! Isn't it nice when things
 meet our default assumptions?
 
 This is why you intuitively grasp why Ruby would throw an error with the
@@ -153,8 +155,8 @@ Sometimes we need to deviate from the default **sequence**. We might need to
 **select** a different path. There's a poem by Robert Frost about it:
 
 > Two roads diverged in a yellow wood,  
-> And sorry I could not travel both . 
-> And be one traveler . 
+> And sorry I could not travel both 
+> And be one traveler, long I stood 
 
 In this case, the traveler is Ruby, traveling fatefully down the default
 sequence. We, as programmers, create a fork, a "split" in fate, and ask Ruby to
@@ -184,7 +186,7 @@ flow "hopping" from one point to another, skipping what's in the middle.
 ![Repetition Graphic](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Repetition_thick.png)
 
 **Repetition** lets us disrupt default flow by _repeating_. The `.times`
-method, which will introduce formally in a few lessons, means "do something
+method, which we will introduce formally in a few lessons, means "do something
 `<value>` times." That "something" is held inside a `do...end` block. Other
 programming languages like JavaScript like to use curly braces (`{}`) to set up
 a "block of stuff to do". Ruby prefers `do...end`.
@@ -210,8 +212,8 @@ This concludes our introduction to this module. This module is like a writing
 class: we know how to write basic _sentences_ with a simple subject and a
 simple verb. We're now going to try to write complete sentences with
 conjunctions and punctuation (like the cookie examples!). We improve our basic
-sentences by bringing in statements from the SELECTION and REPETITION class
-which deviate from the default "flow' or SEQUENCE.
+sentences by using SELECTION or REPETITION statements that allow us to create
+code that deviates from the default "flow" or SEQUENCE.
 
 In upcoming lessons, you'll see our icons repeated to help you have a visual
 reminder of whether the statement you're learning is about SELECTION, REPETITION,
