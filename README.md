@@ -3,25 +3,24 @@
 ## Learning Goals
 
 * Define a statement versus an expression
-* Identify the `nil` value and its purpose
-* Identify three core categories of code statements
-* Provide an example of sequence statement
+* Understand the Default Execution Order
+* Identify two core categories of code statements
 * Provide an example of selection statement
 * Provide an example of repetition statement
 
 ## Introduction
 
 Welcome to Programming as Conversation, Part 2! In this module, we'll be
-enriching the kinds of conversations we have with Ruby. In Part 1, we learned to
-recognize _expressions_ and saw that the data and operations they are comprised of 
-are _evaluated_ to produce a result or "return value." We also learned three 
-important expressions: the constant expression, the assignment expression, and the 
-variable lookup expression. In this next module, we'll see that evaluations of 
-expressions, while powerful, need _statements_ to control when (sequence), whether 
-(selection), and how many times (repetition) they are _evaluated_. Code of this 
-type is called a "statement."
+enriching the kinds of conversations we have with JavaScript. In Part 1, we
+learned to recognize _expressions_ and saw that the data and operations they are
+comprised of are _evaluated_ to produce a result or "return value." We also
+learned three important expressions: the constant expression, the assignment
+expression, and the variable lookup expression. In this next module, we'll see
+that evaluations of expressions, while powerful, need _statements_ to control
+when (sequence), whether (selection), and how many times (repetition) they are
+_evaluated_. Code of this type is called a "statement."
 
-We can see a parallel between expressions and statements to how children
+We can see a parallel between expressions and statements with how children
 _first_ learn to speak and how they enrich their communication with time.
 Learning to talk is a gigantic achievement. It's a much-loved moment for
 parents when a child learns to communicate through words instead of screaming
@@ -49,86 +48,43 @@ give us greater flexibility **and** enrich our communication.
 
 ## Define a Statement Versus an Expression
 
-**Statements alter the order in which code is evaluated from the default
-execution order of top-to-bottom, left-to-right. The default execution order is
-sometimes called the default code "flow." Statements usually return no value.**
+We have learned that all JavaScript expressions have a return value. JavaScript
+statements, on the other hand, don't necessarily. We've already seen one type of
+statement: the variable declaration. A variable declaration has no return value;
+this is the case regardless of whether we assign a value at the time the
+variable is declared:
 
-Below, `1 + 1` is an expression:
-
-```ruby
-result = 1 + 1 #=> 2`
+```js
+const string = "Hello";
+//=>
+let string2;
+//=>
+string2 = "World";
+//=> "World"
+string2;
+//=> "World"
 ```
 
-Below, `puts result` is a ***statement***:
+A _variable declaration_ is a statement, while a _variable assignment_ and a
+_variable lookup_ (as we have learned) are expressions.
 
-```ruby
-result = 1 + 1 #=> 2`
-puts result #=> nil`
-2
-```
+Some of the most commonly used statements in JavaScript and other languages
+allow us to alter the order in which code is evaluated, in other words, to
+change the _default execution order_.
 
-Here's an important distinction. The return value, after the `#=>` is `nil` but
-a "side-effect" of running the `puts` statement is printing `2` to the screen.
-Expressions ***always*** return a value. Statements do not, as we see with `puts`.
-
-## Identify the `nil` Value and Its Purpose
-
-The `nil` value means "no value." You might recall that it is treated as a 
-`falsey` value in Ruby. This makes sense because it's the value that represents
-"nothing."
-
-It's not `3` and it's also not any other number. It's also not `0`, a value
-that's no distance from `0` on the number scale. It's a world without the scale
-of `Integer`s or `Float`s.
-
-In short, `nil` is The Void.
-
-The return value of `puts` (print something to something) is `nil` because
-Ruby can't know whether the printing was successful. It knows whether adding
-`1` to `1` was successful. But what if the monitor is disconnected? What if no
-one is looking at it? Because Ruby can't know, it says `nil`.
-
-Again, this behavior underscores the difference between _expressions_ and
-_statements_: _expressions_ always return values. Statements might, but they
-might not.
-
-## Identify Three Core Categories of Code Statements
-
-There are three types of statement that change the order of what gets run and
-in what order:
-
-* **Sequence**: What code will run next by default?
-* **Selection**: Given the default order (or "sequence"), can we choose to run
-  certain lines of code and not others? How do we do so?
-* **Repetition**: Given the default order (or "sequence"), can we choose to do
-  something until a condition is met or until code has run some number of
-  times?
-
-
-> **NOTE**: Be sure to try the following examples yourself in IRB.  These
-> examples assume you're working in a fresh, new IRB session _for each
-> example_. Specifically, they assume that the variables they use have not yet 
-> been defined. If you _don't_ restart IRB between each example, you might get 
-> a surprising result. If that happens, just use `exit` to leave IRB and then 
-> launch a fresh session.
-
-## Provide An Example of Sequence Statement
+## Understand the Default Execution Order
 
 ![Sequence Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Sequence_thick.png)
 
-_As you'll see in the next lessons, we've created a little icon for each of
-these types of statements. We're going to introduce you to these icons now so that we
-remind you which type of statement you're looking at._
+JavaScript by default will read our code according to the rules of a **default
+sequence** or **default flow**: "every line, top to bottom, left to right as
+ruled by order of operations." The "icon" above represents that rule. When you
+see it in the following lessons, you should immediately think about "execution
+order."
 
-The sequence statement isn't so much a statement, as an assumption. Ruby by
-default will read our code according to the rules of a **default sequence** or
-**default flow**: "every line, top to bottom, left to right as ruled by order
-of operations." The "icon" above shows that rule. When you see it, you should
-immediately think about "execution order."
-
-```ruby
-result = 1 + 1
-puts result #=> 2
+```js
+const result = 1 + 1;
+result; //=> 2
 ```
 
 You probably have an intuitive model of the **default sequence** since you
@@ -136,68 +92,68 @@ have the general mindset that English text is read "top to bottom, left to
 right" and expect that to apply to code. It does! Isn't it nice when things
 meet our default assumptions?
 
-This is why you intuitively grasp why Ruby would throw an error with the
+This is why you intuitively grasp why JavaScript would throw an error with the
 following code:
 
-```ruby
-puts result #=> Error
-result = 1 + 1
+```js
+result; //=> Error
+const result = 1 + 1;
 ```
 
 This error makes sense because this code is trying to do a variable lookup
 _before_ setting the variable that is looked up.
 
+## Identify Two Core Categories of Code Statements
+
+There are two types of statement that affect whether code is executed and
+in what order:
+
+* **Selection**: Given the default order (or "sequence"), can we choose to run
+  certain lines of code and not others? How do we do so?
+* **Repetition**: Given the default order (or "sequence"), can we choose to do
+  something until a condition is met or until code has run some number of
+  times?
+
 ## Provide An Example of Selection Statement
 
 ![Seelection Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Selection_thick.png)
 
-Sometimes we need to deviate from the default **sequence**. We might need to
-**select** a different path. There's a poem by Robert Frost about it:
+As represented in the image above, sometimes we need to deviate from the default
+**sequence**. We might need to **select** a different path. There's a [poem by
+Robert Frost](https://www.poetryfoundation.org/poems/44272/the-road-not-taken)
+about it.
 
-> Two roads diverged in a yellow wood,  
-> And sorry I could not travel both 
-> And be one traveler, long I stood 
+In this case, the traveler is JavaScript, traveling fatefully down the default
+sequence. We, as programmers, create a fork, a "split" in fate, and ask
+JavaScript to take one path (or the other, or a third, or a fourth...and so on)
+based on a Boolean "test" expression's return value. We ask JavaScript to
+_select_ the path.
 
-In this case, the traveler is Ruby, traveling fatefully down the default
-sequence. We, as programmers, create a fork, a "split" in fate, and ask Ruby to
-take one path (or the other, or a third, or a fourth...and so on) based on a
-Boolean "test" expression's return value. We ask Ruby to _select_ the path.
+The first  **selection** tool we'll learn is `if`. The `if` statement disrupts
+the "default sequence" by asking JavaScript to run a test, decide whether to follow
+the path, and then move back to the default sequence.
 
-The first tool we'll learn to do **selection** is `if`. The `if` statement
-disrupts the "default sequence" by asking Ruby to run a test, decide whether to
-follow the path, and then move back to the default sequence.
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/UntimelyKnowledgeableNumerator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-```ruby
-favorite_number = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
-if favorite_number >= 10 # evaluating favorite_number >= 10 returns true
-  favorite_number = favorite_number + 10
-  puts "And now your favorite_number is 10 more!"
-end
-puts "THE END"
-```
+**Selection** lets us disrupt default flow by _making a choice_. JavaScript
+evaluates the condition in the parentheses and, if it returns `true`, executes
+the code inside the _block_ (the code enclosed in `{}`). If `favoriteNumber`
+were assigned `0` at the time the `if` statement is evaluated, it would skip
+over the code inside the block. That's why our icon shows the default flow
+"hopping" from one point to another, skipping what's in the middle.
 
-**Selection** lets us disrupt default flow by _making a choice_. If `favorite_number`
-were assigned `0` at the time the `if` statement is evaluated, it would skip over
-the code in the `if...end` block. That's why our icon shows the default
-flow "hopping" from one point to another, skipping what's in the middle.
+Try changing the initial value of `favoriteNumber` or using a different comparison operator and see what happens.
 
 ## Provide An Example of Repetition Statement
 
 ![Repetition Graphic](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Repetition_thick.png)
 
-**Repetition** lets us disrupt default flow by _repeating_. The `.times`
-method, which we will introduce formally in a few lessons, means "do something
-`<value>` times." That "something" is held inside a `do...end` block. Other
-programming languages like JavaScript like to use curly braces (`{}`) to set up
-a "block of stuff to do". Ruby prefers `do...end`.
+**Repetition** lets us disrupt default flow by _repeating_. The `while` loop,
+which we will introduce formally in a few lessons, means "do something `while`
+(or "as long as") some condition is true." That "something" is held inside a code
+block:
 
-```ruby
-favorite_number = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
-10.times do
-  favorite_number = favorite_number + 1
-end
-puts "And now your favorite_number is 10 more! It is #{favorite_number}"
-```
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SturdyJubilantRar?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 **Repetition** lets us disrupt default flow by marking off a set of commands that
 should be re-evaluated multiple times before resuming default flow. It's even
