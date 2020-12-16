@@ -58,9 +58,9 @@ assign a value at the time the variable is declared:
 
 ```js
 const string = "Hello";
-//=>
+//=> undefined
 let string2;
-//=>
+//=> undefined
 string2 = "World";
 //=> "World"
 string2;
@@ -69,6 +69,11 @@ string2;
 
 A _variable declaration_ is a statement, while a _variable assignment_ and a
 _variable lookup_ (as we have learned) are expressions.
+
+> **Note:** If you recall the previous lesson on data types, `undefined` is
+> _technically_ its own **thing** in JavaScript. However, it is used to represent a
+> _lack_ of any particular value, so we treat it as such when we say that variable
+> declaration has no return value.
 
 Some of the most commonly used statements in JavaScript and other languages
 allow us to alter the order in which code is evaluated, in other words, to
