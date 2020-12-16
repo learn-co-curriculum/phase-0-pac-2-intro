@@ -22,10 +22,10 @@ _evaluated_. Code of this type is called a "statement."
 
 We can see a parallel between expressions and statements with how children
 _first_ learn to speak and how they enrich their communication with time.
-Learning to talk is a gigantic achievement. It's a much-loved moment for
-parents when a child learns to communicate through words instead of screaming
-fits. In this early phase, however, some of their statements lack politeness
-and sensitivity.
+Learning to talk is a gigantic achievement. It's a much-loved moment for parents
+when a child learns to communicate through words instead of screaming fits. In
+this early phase, however, some of their statements lack politeness and
+sensitivity.
 
 ![Raw id, uncouth expression of desire for a cookie](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/introduction/Image_92_CookieNOW.png)
 
@@ -38,10 +38,10 @@ desire as our "rougher" example above, but show maturity.
 
 The same is true in code: we can do a great amount of work using just
 _expressions_. However, _mature_ "speakers" of code learn to wrap their
-_expressions_ in other _decisions_ and _context_. This ensures not only
-that the right thing happens, ***but also*** that others can understand the
-code easily. Learning to "wrap" expressions in reader-friendly context will
-continue into Programming as Conversation Part 3 as well.
+_expressions_ in other _decisions_ and _context_. This ensures not only that the
+right thing happens, ***but also*** that others can understand the code easily.
+Learning to "wrap" expressions in reader-friendly context will continue into
+Programming as Conversation Part 3 as well.
 
 Let's start learning how to wrap our _expressions_ in _statements_ that will
 give us greater flexibility **and** enrich our communication.
@@ -87,10 +87,10 @@ const result = 1 + 1;
 result; //=> 2
 ```
 
-You probably have an intuitive model of the **default sequence** since you
-have the general mindset that English text is read "top to bottom, left to
-right" and expect that to apply to code. It does! Isn't it nice when things
-meet our default assumptions?
+You probably have an intuitive model of the **default sequence** since you have
+the general mindset that English text is read "top to bottom, left to right" and
+expect that to apply to code. It does! Isn't it nice when things meet our
+default assumptions?
 
 This is why you intuitively grasp why JavaScript would throw an error with the
 following code:
@@ -101,18 +101,17 @@ const result = 1 + 1;
 ```
 
 This error makes sense because this code is trying to do a variable lookup
-_before_ setting the variable that is looked up.
+_before_ initializing the variable that is looked up.
 
 ## Identify Two Core Categories of Code Statements
 
-There are two types of statement that affect whether code is executed and
-in what order:
+There are two types of statement that affect whether code is executed and in
+what order:
 
 * **Selection**: Given the default order (or "sequence"), can we choose to run
   certain lines of code and not others? How do we do so?
 * **Repetition**: Given the default order (or "sequence"), can we choose to do
-  something until a condition is met or until code has run some number of
-  times?
+  something until a condition is met or until code has run some number of times?
 
 ## Provide An Example of Selection Statement
 
@@ -130,8 +129,8 @@ based on a Boolean "test" expression's return value. We ask JavaScript to
 _select_ the path.
 
 The first  **selection** tool we'll learn is `if`. The `if` statement disrupts
-the "default sequence" by asking JavaScript to run a test, decide whether to follow
-the path, and then move back to the default sequence.
+the "default sequence" by asking JavaScript to run a test, decide whether to
+follow the path, and then move back to the default sequence.
 
 <iframe height="400px" width="100%" src="https://repl.it/@LizBurton/UntimelyKnowledgeableNumerator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
@@ -142,7 +141,8 @@ were assigned `0` at the time the `if` statement is evaluated, it would skip
 over the code inside the block. That's why our icon shows the default flow
 "hopping" from one point to another, skipping what's in the middle.
 
-Try changing the initial value of `favoriteNumber` or using a different comparison operator and see what happens.
+Try changing the initial value of `favoriteNumber` or using a different
+comparison operator and see what happens.
 
 ## Provide An Example of Repetition Statement
 
@@ -150,27 +150,28 @@ Try changing the initial value of `favoriteNumber` or using a different comparis
 
 **Repetition** lets us disrupt default flow by _repeating_. The `while` loop,
 which we will introduce formally in a few lessons, means "do something `while`
-(or "as long as") some condition is true." That "something" is held inside a code
-block:
+(or "as long as") some condition is true." That "something" is held inside a
+code block:
 
 <iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SturdyJubilantRar?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-**Repetition** lets us disrupt default flow by marking off a set of commands that
-should be re-evaluated multiple times before resuming default flow. It's even
-possible to get into a repetition statement that you never exit. Programmers
-call that an "infinite loop." Most of the time, that's not a desirable situation.
-Our icon shows the more desirable situation of us following default sequence, then
-finding a block that we repeat multiple times, then returning to default sequence.
+**Repetition** lets us disrupt default flow by marking off a set of commands
+that should be re-evaluated multiple times before resuming default flow. It's
+even possible to get into a repetition statement that you never exit.
+Programmers call that an "infinite loop." Most of the time, that's not a
+desirable situation. Our icon shows the more desirable situation of us following
+default sequence, then finding a block that we repeat multiple times, then
+returning to default sequence.
 
 ## Conclusion
 
 This concludes our introduction to this module. This module is like a writing
-class: we know how to write basic _sentences_ with a simple subject and a
-simple verb. We're now going to try to write complete sentences with
-conjunctions and punctuation (like the cookie examples!). We improve our basic
-sentences by using SELECTION or REPETITION statements that allow us to create
-code that deviates from the default "flow" or SEQUENCE.
+class: we know how to write basic _sentences_ with a simple subject and a simple
+verb. We're now going to try to write complete sentences with conjunctions and
+punctuation (like the cookie examples!). We improve our basic sentences by using
+SELECTION or REPETITION statements that allow us to create code that deviates
+from the default "flow" or SEQUENCE.
 
 In upcoming lessons, you'll see our icons repeated to help you have a visual
-reminder of whether the statement you're learning is about SELECTION, REPETITION,
-or SEQUENCE.
+reminder of whether the statement you're learning is about SELECTION,
+REPETITION, or SEQUENCE.
