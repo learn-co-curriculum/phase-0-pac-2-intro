@@ -49,10 +49,12 @@ give us greater flexibility **and** enrich our communication.
 ## Define a Statement Versus an Expression
 
 We have learned that all JavaScript expressions have a return value. JavaScript
-statements, on the other hand, don't necessarily. We've already seen one type of
-statement: the variable declaration. A variable declaration has no return value;
-this is the case regardless of whether we assign a value at the time the
-variable is declared:
+statements, on the other hand, don't necessarily. We can think of a statement
+as an _instruction_ for some action we want to carry out.
+
+We've already seen one type of statement: the variable declaration. A variable
+declaration has no return value; this is the case regardless of whether we
+assign a value at the time the variable is declared:
 
 ```js
 const string = "Hello";
