@@ -75,6 +75,11 @@ _variable lookup_ (as we have learned) are expressions.
 > _lack_ of any particular value, so we treat it as such when we say that variable
 > declaration has no return value.
 
+One type of statement you will encounter frequently as you learn JavaScript is a
+_block statement_. A block statement (also called a _code block_) consists of
+one or more expressions or statements wrapped inside curly brackets (`{}`). We
+will see them in action in upcoming lessons.
+
 Some of the most commonly used statements in JavaScript and other languages
 allow us to alter the order in which code is evaluated, in other words, to
 change the _default execution order_.
