@@ -94,7 +94,7 @@ might not.
 
 ## Identify Three Core Categories of Code Statements
 
-There are three types of statements that affect whether code is executed and
+There are three types of statement that change the order of what gets run and
 in what order:
 
 * **Sequence**: What code will run next by default?
