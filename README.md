@@ -117,7 +117,7 @@ _before_ initializing the variable that is looked up.
 
 ## Identify Two Core Categories of Code Statements
 
-There are two types of statement that affect whether code is executed and in
+There are two types of statements that affect whether code is executed and in
 what order:
 
 * **Selection**: Given the default order (or "sequence"), can we choose to run
@@ -129,7 +129,7 @@ what order:
 
 ![Seelection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
 
-As represented in the image above, sometimes we need to deviate from the default
+As represented in the icon above, sometimes we need to deviate from the default
 **sequence**. We might need to **select** a different path. There's a [poem by
 Robert Frost](https://www.poetryfoundation.org/poems/44272/the-road-not-taken)
 about it.
