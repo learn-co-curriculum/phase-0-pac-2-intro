@@ -71,9 +71,9 @@ A _variable declaration_ is a statement, while a _variable assignment_ and a
 _variable lookup_ (as we have learned) are expressions.
 
 > **Note:** If you recall the previous lesson on data types, `undefined` is
-> _technically_ its own **thing** in JavaScript. However, it is used to represent a
-> _lack_ of any particular value, so we treat it as such when we say that variable
-> declaration has no return value.
+> _technically_ its own **thing** in JavaScript. However, it is used to
+> represent a _lack_ of any particular value, so we treat it as such when we say
+> that variable declaration has no return value.
 
 One type of statement you will encounter frequently as you learn JavaScript is a
 _block statement_. A block statement (also called a _code block_) consists of
