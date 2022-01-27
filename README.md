@@ -127,7 +127,7 @@ what order:
 
 ## Provide An Example of Selection Statement
 
-![Seelection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
+![Selection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
 
 As represented in the icon above, sometimes we need to deviate from the default
 **sequence**. We might need to **select** a different path. There's a [poem by
@@ -144,7 +144,7 @@ The first  **selection** tool we'll learn is `if`. The `if` statement disrupts
 the "default sequence" by asking JavaScript to run a test, decide whether to
 follow the path, and then move back to the default sequence.
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/UntimelyKnowledgeableNumerator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/UntimelyKnowledgeableNumerator?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 **Selection** lets us disrupt default flow by _making a choice_. JavaScript
 evaluates the condition in the parentheses and, if it returns `true`, executes
@@ -165,7 +165,7 @@ which we will introduce formally in a few lessons, means "do something `while`
 (or "as long as") some condition is true." That "something" is held inside a
 code block:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SturdyJubilantRar?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SturdyJubilantRar?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 **Repetition** lets us disrupt default flow by marking off a set of commands
 that should be re-evaluated multiple times before resuming default flow. It's
