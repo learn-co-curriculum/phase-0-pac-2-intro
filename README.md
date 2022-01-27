@@ -144,6 +144,14 @@ The first  **selection** tool we'll learn is `if`. The `if` statement disrupts
 the "default sequence" by asking JavaScript to run a test, decide whether to
 follow the path, and then move back to the default sequence.
 
+```js
+  let favoriteNumber = 32;
+  if (favoriteNumber >= 10) { // evaluating favoriteNumber >= 10 returns true
+    favoriteNumber = favoriteNumber + 10
+  } 
+  favoriteNumber;
+```
+
 <iframe height="400px" width="100%" src="https://repl.it/@LizBurton/UntimelyKnowledgeableNumerator?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 **Selection** lets us disrupt default flow by _making a choice_. JavaScript
@@ -164,6 +172,14 @@ comparison operator and see what happens.
 which we will introduce formally in a few lessons, means "do something `while`
 (or "as long as") some condition is true." That "something" is held inside a
 code block:
+
+```js
+  let favoriteNumber = 0;
+  while (favoriteNumber < 10) {
+    favoriteNumber = favoriteNumber + 1
+  }
+  favoriteNumber;
+```
 
 <iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SturdyJubilantRar?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
