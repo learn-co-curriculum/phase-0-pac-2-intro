@@ -127,7 +127,7 @@ what order:
 
 ## Provide An Example of Selection Statement
 
-![Seelection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
+![Selection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
 
 As represented in the icon above, sometimes we need to deviate from the default
 **sequence**. We might need to **select** a different path. There's a [poem by
