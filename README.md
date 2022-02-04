@@ -142,9 +142,17 @@ _select_ the path.
 
 The first  **selection** tool we'll learn is `if`. The `if` statement disrupts
 the "default sequence" by asking JavaScript to run a test, decide whether to
-follow the path, and then move back to the default sequence.
+follow the path, and then move back to the default sequence:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/UntimelyKnowledgeableNumerator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```js
+let favoriteNumber = 32;
+if (favoriteNumber >= 10) { // evaluating favoriteNumber >= 10 returns true
+  favoriteNumber = favoriteNumber + 10
+} 
+favoriteNumber;
+```
+
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/Sandbox?lite=1&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 **Selection** lets us disrupt default flow by _making a choice_. JavaScript
 evaluates the condition in the parentheses and, if it returns `true`, executes
@@ -165,7 +173,15 @@ which we will introduce formally in a few lessons, means "do something `while`
 (or "as long as") some condition is true." That "something" is held inside a
 code block:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SturdyJubilantRar?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```js
+let favoriteNumber = 0;
+while (favoriteNumber < 10) {
+  favoriteNumber = favoriteNumber + 1
+}
+favoriteNumber;
+```
+
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/Sandbox?lite=1&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 **Repetition** lets us disrupt default flow by marking off a set of commands
 that should be re-evaluated multiple times before resuming default flow. It's
