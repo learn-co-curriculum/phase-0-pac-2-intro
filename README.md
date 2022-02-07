@@ -142,7 +142,8 @@ _select_ the path.
 
 The first  **selection** tool we'll learn is `if`. The `if` statement disrupts
 the "default sequence" by asking JavaScript to run a test, decide whether to
-follow the path, and then move back to the default sequence:
+follow the path, and then move back to the default sequence. Try this code in
+the REPL console window:
 
 ```js
 let favoriteNumber = 32;
