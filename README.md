@@ -142,18 +142,16 @@ _select_ the path.
 
 The first  **selection** tool we'll learn is `if`. The `if` statement disrupts
 the "default sequence" by asking JavaScript to run a test, decide whether to
-follow the path, and then move back to the default sequence. Try this code in
-the REPL console window:
+follow the path, and then move back to the default sequence. Go ahead and open
+[replit][], paste the code below into the code window, and run it:
 
 ```js
-let favoriteNumber = 32;
+const favoriteNumber = 32;
 if (favoriteNumber >= 10) { // evaluating favoriteNumber >= 10 returns true
   favoriteNumber = favoriteNumber + 10
 } 
-favoriteNumber;
+console.log(favoriteNumber);
 ```
-
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/Sandbox?lite=1&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 **Selection** lets us disrupt default flow by _making a choice_. JavaScript
 evaluates the condition in the parentheses and, if it returns `true`, executes
@@ -177,12 +175,14 @@ code block:
 ```js
 let favoriteNumber = 0;
 while (favoriteNumber < 10) {
-  favoriteNumber = favoriteNumber + 1
+  favoriteNumber = favoriteNumber + 1;
 }
-favoriteNumber;
+console.log(favoriteNumber);
 ```
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/Sandbox?lite=1&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+Run this code in the REPL as well. Try changing the value we're using in our
+condition, or experiment with where you put the `console.log()`, and see what
+happens.
 
 **Repetition** lets us disrupt default flow by marking off a set of commands
 that should be re-evaluated multiple times before resuming default flow. It's
@@ -200,3 +200,5 @@ verb. We're now going to try to write complete sentences with conjunctions and
 punctuation (like the cookie examples!). We improve our basic sentences by using
 SELECTION or REPETITION statements that allow us to create code that deviates
 from the default "flow" or SEQUENCE.
+
+[replit]: https://replit.com/languages/javascript
