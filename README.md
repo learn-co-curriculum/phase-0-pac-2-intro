@@ -146,7 +146,7 @@ follow the path, and then move back to the default sequence. Go ahead and open
 [replit][], paste the code below into the code window, and run it:
 
 ```js
-const favoriteNumber = 32;
+let favoriteNumber = 32;
 if (favoriteNumber >= 10) { // evaluating favoriteNumber >= 10 returns true
   favoriteNumber = favoriteNumber + 10
 } 
