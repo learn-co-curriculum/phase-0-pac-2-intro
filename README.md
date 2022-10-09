@@ -165,7 +165,7 @@ comparison operator and see what happens.
 
 ## Provide An Example of Repetition Statement
 
-![Repetition, is deviate from the default path. By repearing a sequence of instructions.](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Repetition_thick.png)
+![Repetition, is deviation from the default path. By repearing a sequence of instructions.](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Repetition_thick.png)
 
 **Repetition** lets us disrupt default flow by _repeating_. The `while` loop,
 which we will introduce formally in a few lessons, means "do something `while`
