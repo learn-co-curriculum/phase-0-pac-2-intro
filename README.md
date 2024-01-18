@@ -27,14 +27,14 @@ when a child learns to communicate through words instead of screaming fits. In
 this early phase, however, some of their statements lack politeness and
 sensitivity.
 
-![Raw id, uncouth expression of desire for a cookie](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Image_92_CookieNOW.png)
+![Uncouth expression of desire for a cookie (Cookie. Now!).](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Image_92_CookieNOW.png)
 
 Part of growing in their ability to converse is learning to wrap their desires
 in politeness and consideration for the listener. "Would you mind giving me a
 cookie?" and "Would you care to join me for a cookie?" both express the same
 desire as our "rougher" example above, but show maturity.
 
-![A mannerly cookie request](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Image_93_CookiePolite.png)
+![A mannerly cookie request (May I have a cookie? Or will you join me?)](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Image_93_CookiePolite.png)
 
 The same is true in code: we can do a great amount of work using just
 _expressions_. However, _mature_ "speakers" of code learn to wrap their
@@ -86,7 +86,7 @@ change the _default execution order_.
 
 ## Understand the Default Execution Order
 
-![Sequence Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Sequence_thick.png)
+![A sequence showing code execution order.](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Sequence_thick.png)
 
 JavaScript by default will read our code according to the rules of a **default
 sequence** or **default flow**: "every line, top to bottom, left to right as
@@ -127,7 +127,7 @@ what order:
 
 ## Provide An Example of Selection Statement
 
-![Selection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
+![A deviation from the default path. By choosing a different path.](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
 
 As represented in the icon above, sometimes we need to deviate from the default
 **sequence**. We might need to **select** a different path. There's a [poem by
@@ -165,7 +165,7 @@ comparison operator and see what happens.
 
 ## Provide An Example of Repetition Statement
 
-![Repetition Graphic](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Repetition_thick.png)
+![Repetition, is deviation from the default execution path. By repeating a sequence of instructions.](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Repetition_thick.png)
 
 **Repetition** lets us disrupt default flow by _repeating_. The `while` loop,
 which we will introduce formally in a few lessons, means "do something `while`
